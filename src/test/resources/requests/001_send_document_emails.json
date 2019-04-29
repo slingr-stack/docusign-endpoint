@@ -1,0 +1,90 @@
+{
+  "subject": "Test message",
+  "message": "Test message to request-signature from document",
+  "signers": [
+    {
+      "email": "lefunes@slingr.io",
+      "name": "Slingr Test Account",
+      "routingOrder": 2
+    },
+    {
+      "email": "lefunes+2@slingr.io",
+      "name": "Slingr Test Account - 2",
+      "tabs": {
+          "signHereTabs": [
+              {
+                "xPosition": "100",
+                "yPosition": "100",
+                "documentId": "1",
+                "pageNumber": "1"
+              }
+          ],
+          "initialHereTabs": [
+              {
+                  "xPosition": "200",
+                  "yPosition": "100",
+                  "documentId": "1",
+                  "pageNumber": "1"
+              }
+          ]
+        }
+    },
+    {
+      "email": "lefunes+3@slingr.io",
+      "name": "Slingr Test Account - 3",
+      "routingOrder": 3
+    }
+  ],
+  "documents": [
+    {
+      "test": true,
+      "fileId": "000000000000000001",
+      "fileName": "document_01.txt"
+    },
+    {
+      "test": true,
+      "fileId": "000000000000000002",
+      "fileName": "document_02.txt"
+    },
+    {
+      "test": true,
+      "fileId": "000000000000000003",
+      "fileName": "document_03.txt"
+    },
+    {
+      "test": true,
+      "fileId": "000000000000000004",
+      "fileName": "document_04.txt"
+    },
+    {
+      "test": true,
+      "fileId": "000000000000000005",
+      "fileName": "document_05.txt"
+    },
+    {
+      "test": true,
+      "fileId": "000000000000000006",
+      "fileName": "document_06.txt"
+    },
+    {
+      "test": true,
+      "fileId": "000000000000000007",
+      "fileName": "document_07.txt"
+    },
+    {
+      "test": true,
+      "fileId": "000000000000000008",
+      "fileName": "document_08.txt"
+    },
+    {
+      "test": true,
+      "fileId": "000000000000000009",
+      "fileName": "document_09.txt"
+    },
+    {
+      "test": true,
+      "fileId": "000000000000000010",
+      "fileName": "document_10.txt"
+    }
+  ]
+}

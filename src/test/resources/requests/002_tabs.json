@@ -1,0 +1,80 @@
+{
+  "subject": "Test message w/ tabs",
+  "message": "Test message to request-signature from document that contains tabs",
+  "signers": [
+      {
+          "email": "test@crm.slingr.io",
+          "name": "Slingr Test Account",
+          "tabs": {
+              "signHereTabs": [
+                  {
+                      "xPosition": 100,
+                      "yPosition": 100,
+                      "documentId": 1,
+                      "pageNumber": 1
+                  },
+                  {
+                      "xPosition": "100",
+                      "yPosition": "300",
+                      "documentId": "1",
+                      "pageNumber": "1"
+                  },
+                  {
+                      "anchorString": "EXAMPLE #1",
+                      "anchorXOffset": 1,
+                      "anchorYOffset": 0,
+                      "anchorIgnoreIfNotPresent": "false",
+                      "anchorUnits": "inches"
+                  }
+              ],
+              "initialHereTabs": [
+                  {
+                      "xPosition": 200,
+                      "yPosition": 100,
+                      "documentId": 1,
+                      "pageNumber": 1
+                  }
+              ],
+              "textTabs": [
+                  {
+                      "tabLabel": "Data Field",
+                      "value": "Default value",
+                      "locked": "false",
+                      "xPosition": "200",
+                      "yPosition": "200",
+                      "documentId": "1",
+                      "pageNumber": "1"
+                  }
+              ],
+              "radioGroupTabs": [
+                  {
+                      "documentId": "1",
+                      "groupName": "RadioGroup1",
+                      "radios": [
+                          {
+                              "pageNumber": "1",
+                              "selected": "true",
+                              "value": "X",
+                              "xPosition": "300",
+                              "yPosition": "75"
+                          },
+                          {
+                              "pageNumber": "1",
+                              "selected": "false",
+                              "xPosition": "350",
+                              "yPosition": "75"
+                          }
+                      ]
+                  }
+              ]
+          }
+      }
+  ],
+  "documents": [
+      {
+          "test": true,
+          "fileId": "000000000000000001",
+          "fileName": "001.txt"
+      }
+  ]
+}

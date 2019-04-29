@@ -1,0 +1,80 @@
+{
+  "subject": "Test message",
+  "message": "Test message to request-signature from document",
+  "signers": [
+    {
+      "email": "test@crm.slingr.io",
+      "name": "Slingr Test Account",
+      "routingOrder": 2
+    },
+    {
+      "email": "test+2@crm.slingr.io",
+      "name": "Slingr Test Account - 2",
+      "tabs": {
+          "signHereTabs": [
+              {
+                  "xPosition": "100",
+                  "yPosition": "100",
+                  "documentId": "1",
+                  "pageNumber": "1"
+              }
+          ],
+          "initialHereTabs": [
+              {
+                  "xPosition": "200",
+                  "yPosition": "100",
+                  "documentId": "1",
+                  "pageNumber": "1"
+              }
+          ]
+      }
+    },
+    {
+      "email": "test+3@crm.slingr.io",
+      "name": "Slingr Test Account - 3",
+      "routingOrder": 3
+    }
+  ],
+  "documents": [
+    {
+      "fileId": "000000000000000001",
+      "fileName": "document_01.txt"
+    },
+    {
+      "fileId": "000000000000000002",
+      "fileName": "document_02.pdf"
+    },
+    {
+      "fileId": "000000000000000003",
+      "fileName": "document_03.rtf"
+    },
+    {
+      "fileId": "000000000000000004",
+      "fileName": "document_04.xls"
+    },
+    {
+      "fileId": "000000000000000005",
+      "fileName": "document_05.xlsx"
+    },
+    {
+      "fileId": "000000000000000006",
+      "fileName": "document_06.csv"
+    },
+    {
+      "fileId": "000000000000000007",
+      "fileName": "document_07.html"
+    },
+    {
+      "fileId": "000000000000000008",
+      "fileName": "document_08.doc"
+    },
+    {
+      "fileId": "000000000000000009",
+      "fileName": "document_09.docx"
+    },
+    {
+      "fileId": "000000000000000010",
+      "fileName": "document_10.txt"
+    }
+  ]
+}

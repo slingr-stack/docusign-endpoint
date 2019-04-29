@@ -1,0 +1,105 @@
+{
+    "label": "DocuSign",
+    "name": "docusign",
+    "apiVersion": "v1",
+    "internal": true,
+    "configurationType": "GLOBAL",
+    "deployment": {
+        "profiles":[
+            {
+                "name": "default",
+                "label": "Default",
+                "memory": 384,
+                "offHeapMinFactor": 1.5,
+                "description": "Default configuration"
+            }
+        ],
+        "allowMultipleInstances": false
+    },
+    "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/docusign.png",
+    "status": "ACTIVE",
+    "stores": [],
+    "events": [
+        {
+            "label": "Envelope Status Changed",
+            "name": "envelopeStatusChanged",
+            "description": "This event is sent when the document has been completed by all the recipients, the envelope has been declined by one of the recipients, or voided by the sender."
+        },
+        {
+            "label": "Recipient Status Changed",
+            "name": "recipientStatusChanged",
+            "description": "This event is sent when the recipient has signed (completed) the document, the recipient declines to sign the document(s),  the recipient fails an authentication check, or DocuSign gets notification that an email delivery has failed (such as a bad email address or that the recipient’s email system auto-responds to the email)"
+        }
+    ],
+    "functions": [
+        {
+            "label": "Send an envelope from documents",
+            "name": "requestSignatureFromDocument",
+            "description": "This creates an envelope and sends it to recipients"
+        },
+        {
+            "label": "Update envelope",
+            "name": "updateEnvelope",
+            "description": "This lets you add or modify draft or in-process envelope information, including recipients, tabs, custom fields, and notifications."
+        }
+    ],
+    "configuration":[
+        {
+            "name": "email",
+            "label": "Email",
+            "description": "Email to access to the DocuSign account",
+            "type": "text",
+            "required": true,
+            "typeOptions": {
+                "validation": "email"
+            }
+        },
+        {
+            "name": "password",
+            "label": "Password",
+            "description": "Password to access to the DocuSign account",
+            "type": "password",
+            "required": true
+        },
+        {
+            "name": "integratorKey",
+            "label": "Integrator key",
+            "description": "Active integration key that will be used to access to the DucuSign API",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "demoIntegrationKey",
+            "label": "Demo key",
+            "description": "Put in 'Yes' if the given integration key is a demo/developer key. Valid values 'yes', 'no', 'true', 'false' and with placeholders ('Custom' option).",
+            "type": "buttonsGroup",
+            "required": true,
+            "defaultValue": "no",
+            "typeOptions": {
+                "allowCustom": true,
+                "possibleValues":[
+                    {
+                        "label":"Yes",
+                        "name":"yes"
+                    },
+                    {
+                        "label":"No",
+                        "name":"no"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "webhook",
+            "label": "Webhook URL",
+            "type": "label",
+            "value": "@config.WEBHOOK_URL"
+        },
+        {
+            "name": "config",
+            "label": "Configuration",
+            "value": "<ul><li>Insert your credentials to access to the DocuSign service.</li><li>Access to the 'Preferences' page in the classic interface with the menu option that appears when you click the user avatar (at the top right). If you are using the new interface, use the 'Switch to classic' menu option before.</li><li>In the 'API and Integrator Key Information' page (Account Administration -> API) copy your active Integration Key and paste to this form. If you have not a key, create a new one. Enable 'Demo key' if the integration key is for demonstration (Demo Integration Key). </li><li>In the 'DocuSign Connect Settings' page (Account Administration -> Connect) create two new 'Custom' configurations ('+ Add configuration' button):<ul><li>Envelope Status Changed webhook: <ul><li>Name: 'Envelope Status Changed webhook'</li><li>URL to publish to: Put here the 'Webhook URL' that appears in this page.</li><li>Enable 'Allow Envelope Publish'</li><li>Enable 'Include Documents'</li><li>Enable the following options on the 'Send information on these envelope events' section: <ul><li>Envelope Completed</li><li>Envelope Declined</li><li>Envelope Voided</li></ul></li><li>Enable 'All users integrated (includes new users)' on the 'Select users to integrate' section</li></ul></li><li>Recipient Status Changed webhook: <ul><li>Name: 'Recipient Status Changed webhook'</li><li>URL to publish to: Put here the 'Webhook URL' that appears in this page.</li><li>Enable 'Allow Envelope Publish'</li><li>Enable the following options on the 'Send information on these recipient events' section: <ul><li>Recipient Delivery Failed</li><li>Recipient Signed/Completed</li><li>Recipient Declined</li><li>Recipient Authentication Failure</li></ul></li><li>Enable 'All users integrated (includes new users)' on the 'Select users to integrate' section</li></ul></li></ul></li></ul>",
+            "type": "info"
+        }
+    ]
+}

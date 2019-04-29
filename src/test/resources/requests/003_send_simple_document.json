@@ -1,0 +1,16 @@
+{
+  "subject": "Test message",
+  "message": "Test message to request-signature from document",
+  "signers": [
+    {
+      "email": "lefunes+test@gmail.com",
+      "name": "Slingr Test Account"
+    }
+  ],
+  "documents": [
+    {
+      "fileId": "000000000000000001",
+      "fileName": "document_01.txt"
+    }
+  ]
+}
